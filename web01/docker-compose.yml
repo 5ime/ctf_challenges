@@ -1,0 +1,11 @@
+version: '2'
+services:
+  service: 
+    build: .
+    image: test
+    ports:
+      - 9999:80
+    volumes:
+        - "$PWD/files/.flag:/var/user/flag"
+    tty: true
+
