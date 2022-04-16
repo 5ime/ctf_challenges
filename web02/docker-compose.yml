@@ -2,10 +2,7 @@ version: '2'
 services:
   service: 
     build: .
-    image: web01
+    image: web02
     ports:
       - 9999:80
-    volumes:
-        - "$PWD/files/.flag:/var/user/flag"
     tty: true
-
