@@ -1,0 +1,18 @@
+version: '2'
+services:
+  service: 
+    build: .
+    image: 2021web3
+    ports:
+      - 9999:80
+    volumes:
+        - "$PWD/flag:/flag"
+    tty: true
+    networks:
+      - net
+
+networks:
+    # 配置docker network
+    net: 
+      external: 
+         name: h1ve_frp_containers

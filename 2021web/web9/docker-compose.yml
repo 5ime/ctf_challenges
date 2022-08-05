@@ -1,0 +1,19 @@
+version: '2'
+services:
+  service: 
+    build: .
+    image: 2021web9
+    ports:
+      - 9999:80
+    volumes:
+        - "$PWD/flag:/flag"
+        - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+    tty: true
+    networks:
+      - net
+
+networks:
+    # 配置docker network
+    net: 
+      external: 
+         name: h1ve_frp_containers
